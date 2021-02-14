@@ -5,7 +5,7 @@
         <div class="picSpace px-15">
 
         </div>
-        <div>
+        <div class="px-15">
           <div class="flex">
             <nav class="repoTabs">
               <ul class="flex">
@@ -16,9 +16,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="" class="flex items-center">
+                  <a href="" class="flex items-center selected">
                     <svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg>
-                    Repositories
+                    Repositories <span class="counter">56</span>
                   </a>
                 </li>
                 <li>
@@ -54,7 +54,7 @@ export default {
 
 <style>
 .picSpace{
-  width: 25%
+  width: 23%
 }
 .butBord{
   border-bottom: solid #e1e4e8 1px;
@@ -81,6 +81,27 @@ export default {
   background-color: initial;
   border: 0;
   border-bottom: 2px solid transparent;
+}
+.repoTabs .selected{
+  font-weight: 600;
+  color: #24292e;
+  border-bottom-color: #f9826c;
+  outline: 1px dotted transparent;
+  outline-offset: -1px;
+}
+.counter{
+    display: inline-block;
+    min-width: 20px;
+    padding: 0 6px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #24292e;
+    text-align: center;
+    background-color: rgba(209,213,218,0.5);
+    border: 1px solid transparent;
+    border-radius: 2em;
+    margin-left: 5px;
 }
 
 </style>

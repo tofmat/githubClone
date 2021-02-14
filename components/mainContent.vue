@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content flex">
     <div class="lhs px-15">
       <div class="lhImage">
         <a href="">
@@ -73,12 +73,18 @@
         </div>
       </div>
     </div>
+    <div class="rhs px-15">
+      <repoList />
+    </div>
   </div>
 </template>
 
 <script>
+import repoList from '~/components/repoList.vue'
 export default {
-
+  components: {
+    repoList
+  }
 }
 </script>
 
@@ -87,8 +93,11 @@ export default {
   padding: 0 8%;
 }
 .lhs{
-  width: 25%;
+  width: 23%;
   margin-top: -30px;
+}
+.rhs {
+  width: 75%;
 }
 .lhImage{
   position: relative;

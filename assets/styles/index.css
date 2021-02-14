@@ -45,3 +45,12 @@ ul{
 .mx-10{
   margin: 10px 0;
 }
+.flex-auto {
+  flex: auto;
+}
+.mxx-6{
+  margin: 0 6px;
+}
+.ml-6{
+  margin-left: 6px;
+}
