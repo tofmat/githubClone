@@ -1,5 +1,6 @@
 body{
   margin: 0px !important;
+  background-color: var(--body-back-color);
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 button{
@@ -58,4 +59,18 @@ ul{
 }
 .mb-15{
   margin-bottom: 15px;
+}
+.justify-between{
+    justify-content: space-between;
+}
+:root {
+  /* Variables for default theme (light-mode) */
+  --body-back-color: white;
+  --text-color: black;  
+}
+
+[data-theme="darkMode"] {
+  /* Variables for dark mode */
+  --body-back-color: #0d1117;
+  --text-color: white;   
 }

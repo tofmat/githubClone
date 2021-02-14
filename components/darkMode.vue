@@ -1,15 +1,32 @@
 <template>
   <div>
       <label class="switch">
-        <input type="checkbox" checked>
-        <span class="slider round"></span>
+        <input type="checkbox">
+        <span class="slider round" @click="invert()"></span>
       </label>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return{
+      theme: '',
+      darkMode: false,
+    }
+  },
+  methods: {
+    invert () {
+      // this.darkMode = !this.darkMode
+      this.theme = this.theme == 'darkMode' ? '' : 'darkMode'; //toggles theme value
+      document.documentElement.setAttribute('data-theme', this.theme);
+      localStorage.setItem('theme', this.theme); // stores theme value on local storage
+    }
+  },
+  computed: {
 
+  
+  }
 }
 </script>
 
@@ -52,11 +69,11 @@ export default {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: black;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px black;
 }
 
 input:checked + .slider:before {
