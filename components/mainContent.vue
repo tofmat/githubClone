@@ -165,7 +165,7 @@ export default {
   text-decoration: none;
   color: #6a737d;
 }
-.cli :hover{
+.cli:hover{
   color: #0366d6 !important;
 }
 .details{

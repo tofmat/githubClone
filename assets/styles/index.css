@@ -3,6 +3,8 @@ body{
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 button{
+  cursor: pointer;
+  outline: none;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 .flex{
@@ -53,4 +55,7 @@ ul{
 }
 .ml-6{
   margin-left: 6px;
+}
+.mb-15{
+  margin-bottom: 15px;
 }

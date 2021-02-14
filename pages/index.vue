@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="butBord">
-      <div class="flex repoNav">
+      <div class="flex repoNav top-0 position-sticky">
         <div class="picSpace px-15">
 
         </div>
@@ -61,7 +61,7 @@ export default {
 }
 .repoNav{
   padding: 0 8%;
-  margin-top: 60px;
+  margin-top: 45px;
 }
 .repoTabs svg {
   margin-right: 6px;
@@ -103,5 +103,11 @@ export default {
     border-radius: 2em;
     margin-left: 5px;
 }
-
+.top-0 {
+    top: 0!important;
+}
+.position-sticky {
+    position: -webkit-sticky!important;
+    position: sticky!important;
+}
 </style>
