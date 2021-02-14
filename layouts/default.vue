@@ -72,6 +72,10 @@
   color: white;
   background-color: #24292e;
 }
+.main{
+  max-width: 1600px;
+  margin: auto;
+}
 .header ul {
   list-style: none;
   display: flex;
@@ -130,7 +134,7 @@
 .main{
   /* padding: 0 10%; */
 }
-@media (max-width: 780px) {
+@media (max-width: 900px) {
   .heading{
     justify-content: space-between;
   }

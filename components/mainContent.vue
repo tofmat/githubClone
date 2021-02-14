@@ -1,5 +1,5 @@
 <template>
-  <div class="content flex">
+  <div class="content flex mainKini">
     <div class="lhs px-15">
       <div class="lhImage">
         <a href="">
@@ -181,5 +181,10 @@ export default {
 }
 .nobottomBorder{
   border-bottom: none;
+}
+@media (max-width: 1350px) {
+  .content{
+    padding: 0 1%;
+  }
 }
 </style>
