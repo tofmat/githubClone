@@ -66,11 +66,21 @@ ul{
 :root {
   /* Variables for default theme (light-mode) */
   --body-back-color: white;
-  --text-color: black;  
+  --blackish-grey: #24292e;
+  --checkedCursor: black;
+  --muchText: #586069;
+  --buttonKini: #fafbfc;
+  --borderKini: #e1e4e8;
+  --blacktowhite: black
 }
 
 [data-theme="darkMode"] {
   /* Variables for dark mode */
   --body-back-color: #0d1117;
-  --text-color: white;   
+  --blackish-grey: #8b949e;
+  --checkedCursor: #3c1e70;
+  --muchText: #8b949e;
+  --buttonKini: #21262d;
+  --borderKini: #30363d;
+  --blacktowhite: white;
 }

@@ -112,7 +112,7 @@ export default {
   padding: 10px;
   border-radius: 50%;
   background-color: white;
-  fill: #24292e;
+  fill: var(--blackish-grey);
 }
 .babyFace {
   position: absolute;
@@ -125,17 +125,17 @@ export default {
 .userInfo h1{
   font-size: 26px;
   line-height: 1.25;
-  color: #24292e;
+  color: var(--blackish-grey);
   margin-bottom: 1px;
 }
 .userInfo h2{
   font-style: normal;
   font-weight: 300;
-  color: #586069;
+  color: var(--muchText);
   margin-top: 0 !important;
 }
 .de{
-  color: #24292e !important;
+  color: var(--blackish-grey) !important;
   font-weight: 400 !important;
   margin-bottom: 20px;
 }
@@ -143,19 +143,19 @@ export default {
   width: 100%;
   border: solid rgba(27,31,35,0.15) 1px;
   padding: 5px 10px;
-  color: #24292e;
+  color: var(--blackish-grey);
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   border-radius: 6px;
-  background-color: #fafbfc;
+  background-color: var(--buttonKini);
   margin-bottom: 20px;
 }
 .foll svg {
   fill: #6a737d;
 }
 .foll span{
-  color: black;
+  color: var(--blacktowhite);
 }
 .foll{
   color: #6a737d;
@@ -172,11 +172,12 @@ export default {
   margin: 20px 0;
   padding-bottom: 20px;
   font-size: 14px;
-  color: #24292e;
+  color: var(--blackish-grey);
   border-bottom: #b5b9be solid 1px;
 }
 .details svg {
   margin-right: 10px;
+  fill: var(--blacktowhite)
 }
 .nobottomBorder{
   border-bottom: none;

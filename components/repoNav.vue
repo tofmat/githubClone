@@ -63,7 +63,7 @@ export default {
     width: 77%;
 }
 .butBord{
-  border-bottom: solid #e1e4e8 1px;
+  border-bottom: solid var(--borderKini) 1px;
 }
 .repoNav{
   padding: 0 8%;
@@ -81,7 +81,7 @@ export default {
   padding: 8px 16px;
   font-size: 14px;
   line-height: 30px;
-  color: #24292e;
+  color: var(--blackish-grey);
   text-align: center;
   white-space: nowrap;
   background-color: initial;
@@ -90,7 +90,7 @@ export default {
 }
 .repoTabs .selected{
   font-weight: 600;
-  color: #24292e;
+  color: var(--blackish-grey);
   border-bottom-color: #f9826c;
   outline: 1px dotted transparent;
   outline-offset: -1px;
@@ -102,7 +102,7 @@ export default {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    color: #24292e;
+    color: var(--blacktowhite);
     text-align: center;
     background-color: rgba(209,213,218,0.5);
     border: 1px solid transparent;

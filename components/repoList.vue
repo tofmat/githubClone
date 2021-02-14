@@ -135,27 +135,27 @@ export default {
     padding: 5px 12px;
     font-size: 14px;
     line-height: 20px;
-    color: #24292e;
+    color: var(--blackish-grey);
     vertical-align: middle;
-    background-color: white;
+    background-color: transparent;
     background-repeat: no-repeat;
     background-position: right 8px center;
-    border: 1px solid #e1e4e8;
+    border: 1px solid var(--borderKini);
     border-radius: 6px;
     outline: none;
     box-shadow: inset 0 1px 0 rgba(225,228,232,0.2);
 }
 .repoSearch{
     padding: 20px 0;
-    border-bottom: #e1e4e8 solid 1px;
+    border-bottom: var(--borderKini) solid 1px;
 }
 .repoItem{
     padding: 15px 0;
-    border-bottom: #e1e4e8 solid 1px;
+    border-bottom: var(--borderKini) solid 1px;
 }
 .repoItem p {
     font-size: 14px;
-    color: #586069
+    color: var(--muchText)
 }
 .repoItem h1 a{
     text-decoration: none;
@@ -178,10 +178,10 @@ export default {
     margin-right: 5px;
 }
 .repoSearch .notGreen {
-    color: #24292e;
-    background-color: #fafbfc;
+    color: var(--blackish-grey);
+    background-color: var(--buttonKini);
     border-color: rgba(27,31,35,0.15);
-    border: 1px solid #e1e4e8;
+    border: 1px solid var(--borderKini);
 }
 .notGreen span {
     opacity: .75;
@@ -206,8 +206,9 @@ export default {
 }
 .private{
     padding: 5px 10px;
-    border: solid 1px #e1e4e8;
+    border: solid 1px var(--borderKini);
     border-radius: 2em;
+    color: var(--blacktowhite)
 }
 .right{
     margin-top: 20px;
@@ -217,8 +218,8 @@ export default {
     padding: 3px 12px;
     width: max-content;
     font-size: 12px;
-    color: #24292e;
-    background-color: #fafbfc;
+    color: var(--blackish-grey);
+    background-color: var(--buttonKini);
     border: 1px solid rgba(27,31,35,0.15);
     border-radius: 6px;
     box-shadow: 0 1px 0 rgba(27,31,35,0.04), inset 0 1px 0 hsla(0,0%,100%,0.25);
