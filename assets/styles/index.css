@@ -1,0 +1,39 @@
+body{
+  margin: 0px !important;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+.flex{
+  display: flex;
+}
+.items-center{
+  align-items: center;
+}
+
+.fill-white{
+  fill: white;
+}
+.mr-16{
+  margin-right: 16px;
+}
+.form-control {
+  padding: 2px 5px;
+  vertical-align: middle;
+  border-radius: 6px;
+  outline: none;
+}
+.mr-8 {
+  margin-right: 8px;
+}
+.mr-5{
+  margin-right: 5px;
+}
+.mt-60{
+  margin-top: 60px;
+}
+.px-15{
+  padding: 0 15px;
+}
+ul{
+  padding: 0px;
+  margin: 0px;
+}
