@@ -35,7 +35,7 @@
                 </li>
               </ul>
             </nav>
-            <darkMode class="noMobile"/>
+            <darkMode />
           </div>
         </div>
       </div>

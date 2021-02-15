@@ -265,5 +265,8 @@ export default {
         display: flex;
         flex-direction: column;
     }
+    .left h1 {
+        font-size: 16px;
+    }
 }
 </style>

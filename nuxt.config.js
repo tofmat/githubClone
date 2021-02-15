@@ -19,8 +19,8 @@ export default {
   },
 
   env: {
-    PERSONAL_ACCESS_TOKEN: process.env.PERSONAL_ACCESS_TOKEN || '6f46170c44b3487f1d00d3e6e989787821318f49',
-    USERNAME: process.env.USERNAME || 'tofmat'
+    PERSONAL_ACCESS_TOKEN: process.env.PERSONAL_ACCESS_TOKEN,
+    USERNAME: process.env.USERNAME
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
