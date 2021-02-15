@@ -22,7 +22,7 @@
       <div class="flex repoItem" v-for="repo in repos" :key="repo.id">
           <div class="left">
             <h1><a :href="repo.html_url" target="_blank">{{repo.name}}</a></h1>
-            <small v-if="repo.fork">Forked from {{repo.full_name}}</small>
+            <small v-if="repo.fork" class="noRepo">Forked from {{repo.full_name}}</small>
             <p v-if="repo.description">{{repo.description}}</p>
             <div class="flex">
                 <div class="flex items-center" v-if="repo.language">
