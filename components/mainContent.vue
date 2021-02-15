@@ -218,6 +218,7 @@ export default {
   .headInfo{
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
   .lhImage img {
     border-radius: 50%!important;
