@@ -56,7 +56,7 @@
           </div>
       </div>
       <div v-if="!repos.length">
-          <h1 class="text-center">There's no repo here at the moment</h1>
+          <h1 class="text-center noRepo">There's no repo here at the moment</h1>
       </div>
       <div class="pagination flex items-center justify-center">
           <button class="previous" @click="(pageNumber = pageNumber - 1), clickPag()" :disabled="pageNumber == 1">Previous</button>
@@ -241,6 +241,9 @@ export default {
     border: 1px solid rgba(27,31,35,0.15);
     border-radius: 6px;
     box-shadow: 0 1px 0 rgba(27,31,35,0.04), inset 0 1px 0 hsla(0,0%,100%,0.25);
+}
+.noRepo{
+    color: var(--blacktowhite)
 }
 @media (max-width: 900px) {
     .repoSearch{
