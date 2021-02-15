@@ -63,6 +63,9 @@ ul{
 .justify-between{
     justify-content: space-between;
 }
+.columnFlex{
+  flex-direction: column;
+}
 :root {
   /* Variables for default theme (light-mode) */
   --body-back-color: white;

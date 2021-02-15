@@ -86,7 +86,7 @@ export default {
 .logo svg {
     fill: #d1d5da;
 }
-@media (max-width: 900px){
+@media (max-width: 1000px){
   .breskk{
     flex-direction: column;
   }
