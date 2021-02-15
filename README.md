@@ -1,5 +1,17 @@
 # githubClone
 
+The live url for this project can be found at https://tosingithubclone.netlify.app/
+
+If you want to run this project locally with your github account please provide this variables in the env found in the nuxt.config.js. Example below
+
+env: { <br/>
+  PERSONAL_ACCESS_TOKEN: process.env.PERSONAL_ACCESS_TOKEN || 'your github personal access token here', <br/>
+  USERNAME: process.env.USERNAME || 'your github username' <br/>
+},
+
+
+
+
 ## Build Setup
 
 ```bash
