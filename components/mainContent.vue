@@ -1,17 +1,21 @@
 <template>
   <div class="content flex mainKini">
     <div class="lhs px-15">
-      <div class="lhImage">
-        <a href="">
-          <img src="@/assets/me.jpeg" alt="profile">
-          <div class="babyFace">
-            <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path></svg>
-          </div>
-        </a>
+      <div class="headInfo">
+        <div class="lhImage">
+          <a href="">
+            <img src="@/assets/me.jpeg" alt="profile">
+            <div class="babyFace">
+              <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path></svg>
+            </div>
+          </a>
+        </div>
+        <div class="userInfo">
+          <h1>Tosin Ogunfowote</h1>
+          <h2>tofmat</h2>
+        </div>
       </div>
       <div class="userInfo">
-        <h1>Tosin Ogunfowote</h1>
-        <h2>tofmat</h2>
         <h2 class="de">Frontend Developer</h2>
         <div>
           <button>
@@ -39,7 +43,7 @@
             </a>
           </div>
         </div>
-        <div class="details">
+        <div class="details informations">
           <div class="flex items-center mx-10">
             <svg class="octicon octicon-mail" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"></path></svg>
             tofmatt@gmail.com
@@ -53,7 +57,7 @@
             @dtofmat
           </div>
         </div>
-        <div class="details">
+        <div class="details highlights">
           <h3>Highlights</h3>
           <div class="flex items-center mx-10">
             <svg class="octicon octicon-mail" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"></path></svg>
@@ -64,7 +68,7 @@
             Developer Program Member
           </div>
         </div>
-        <div class="details nobottomBorder">
+        <div class="details nobottomBorder organizations">
           <h3>Organizations</h3>
           <div class="flex items-center mx-10">
             <img src="@/assets/hendray.png" alt="hendray" width="32px" height="32px">
@@ -74,16 +78,19 @@
       </div>
     </div>
     <div class="rhs px-15">
+      <repoNav class="noView"/>
       <repoList />
     </div>
   </div>
 </template>
 
 <script>
+import repoNav from '~/components/repoNav.vue'
 import repoList from '~/components/repoList.vue'
 export default {
   components: {
-    repoList
+    repoList,
+    repoNav
   }
 }
 </script>
@@ -91,6 +98,13 @@ export default {
 <style>
 .content{
   padding: 0 8%;
+}
+.noView{
+  display: none;
+}
+.headInfo{
+  display: flex;
+  flex-direction: column;
 }
 .lhs{
   width: 23%;
@@ -186,5 +200,41 @@ export default {
   .content{
     padding: 0 1%;
   }
+}
+@media (max-width: 900px) {
+  .mainKini{
+    flex-direction: column;
+  }
+  .noView{
+    display: block;
+  }
+  .lhs{
+    width: auto;
+    margin-top: 10px;
+  }
+  .rhs{
+    width: auto;
+  }
+  .headInfo{
+    display: flex;
+    flex-direction: row;
+  }
+  .lhImage img {
+    border-radius: 50%!important;
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px; 
+  }
+  .babyFace{
+    display: none;
+  }
+  .highlights, .organizations {
+    display: none;
+  }
+  .informations {
+    border-bottom: none; 
+  }
+
 }
 </style>

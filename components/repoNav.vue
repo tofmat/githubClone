@@ -1,11 +1,11 @@
 <template>
-  <div>
-      <div class="butBord">
+  <div class="noMobile">
+    <div class="butBord">
       <div class="flex repoNav top-0 position-sticky">
         <div class="picSpace px-15">
 
         </div>
-        <div class="px-15 contentSpace">
+        <div class="px-15 contentSpace nosmallPad scrollX">
           <div class="flex items-center justify-between">
             <nav class="repoTabs">
               <ul class="flex">
@@ -35,7 +35,7 @@
                 </li>
               </ul>
             </nav>
-            <darkMode />
+            <darkMode class="noMobile"/>
           </div>
         </div>
       </div>
@@ -115,5 +115,26 @@ export default {
 .position-sticky {
     position: -webkit-sticky!important;
     position: sticky!important;
+}
+@media (max-width: 900px) {
+  .picSpace{
+    display: none;
+  }
+  .contentSpace{
+    width: auto;
+  }
+  .repoNav{
+    margin-top: 20px;
+    padding: 0;
+  }
+  .scrollX{
+    overflow-x: auto;
+  }
+}
+@media (max-width: 500px) {
+  .nosmallPad{
+    padding: 0;
+  }
+  
 }
 </style>
