@@ -26,7 +26,12 @@
             <p v-if="repo.description">{{repo.description}}</p>
             <div class="flex">
                 <div class="flex items-center" v-if="repo.language">
-                    <span class="repo-language-color mr-5" style="background-color: #2c3e50"></span>
+                    <span class="repo-language-color mr-5" style="background-color: #e34c26" v-if="repo.language == 'HTML'"></span>
+                    <span class="repo-language-color mr-5" style="background-color: #f1e05a" v-else-if="repo.language == 'JavaScript'"></span>
+                    <span class="repo-language-color mr-5" style="background-color: #c6538c" v-else-if="repo.language == 'SCSS'"></span>
+                    <span class="repo-language-color mr-5" style="background-color: #563d7c" v-else-if="repo.language == 'CSS'"></span>
+                    <span class="repo-language-color mr-5" style="background-color: #2c3e50" v-else-if="repo.language == 'Vue'"></span>
+                    <span class="repo-language-color mr-5" style="background-color: #e34c26" v-else></span>
                     <p class="mr-16">{{repo.language}}</p>
                 </div>
                 <p>Updated on {{repo.updated_at | slicee}}</p>
