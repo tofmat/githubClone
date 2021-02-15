@@ -66,6 +66,9 @@ ul{
 .columnFlex{
   flex-direction: column;
 }
+.justify-center{
+  justify-content: center;
+}
 :root {
   /* Variables for default theme (light-mode) */
   --body-back-color: white;

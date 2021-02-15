@@ -34,7 +34,7 @@
           </div>
           <div class="right">
               <button class="flex items-align mb-15">
-                  <svg class="octicon octicon-star mr-5" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
+                  <svg class="octicon octicon-star mr-5 blacckk" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
                   Star
               </button>
               <svg width="155" height="30" class="graph">
@@ -55,21 +55,74 @@
               </svg>
           </div>
       </div>
+      <div v-if="!repos.length">
+          <h1 class="text-center">There's nothing here</h1>
+      </div>
+      <div class="pagination flex items-center justify-center">
+          <button class="previous" @click="(pageNumber = pageNumber - 1), clickPag()" :disabled="pageNumber == 1">Previous</button>
+          <button class="next" @click="(pageNumber = pageNumber + 1), clickPag()">Next</button>
+      </div>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 export default {
+    data() {
+        return {
+            pageNumber: 1
+        }
+    },
     computed: {
         ...mapGetters({
             repos: 'repos',
         })
+    },
+    methods: {
+        clickPag() {
+            window.scrollTo(0, 0);
+            this.$store.dispatch("clearRepos", this.pageNumber);
+            this.$store.dispatch("getNewRepos", this.pageNumber);
+        }
     }
 }
 </script>
 
 <style>
+.pagination {
+    margin: 20px 0;
+}
+.previous {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border: solid 1px var(--borderKini);
+    padding: 6px 12px;
+    color: #0366d6;
+    font-size: 14px;
+}
+.previous:disabled {
+    color: rgba(3,102,214,0.5);
+}
+.previous:disabled:hover{
+    background-color: rgba(239, 239, 239, 0.3);
+    color: rgba(3,102,214,0.5);
+}
+.previous:hover {
+    background-color: #0366d6;
+    color: white;
+}
+.next {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: solid 1px var(--borderKini);
+    padding: 6px 12px;
+    color: #0366d6;
+    font-size: 14px;
+}
+.next:hover {
+    background-color: #0366d6;
+    color: white;
+}
 .dropdown-caret {
     display: inline-block;
     width: 0;
@@ -99,6 +152,9 @@ export default {
     border-radius: 6px;
     outline: none;
     box-shadow: inset 0 1px 0 rgba(225,228,232,0.2);
+}
+.blacckk{
+    fill: var(--blacktowhite)
 }
 .repoSearch{
     padding: 20px 0;

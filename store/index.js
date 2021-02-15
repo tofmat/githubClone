@@ -55,13 +55,24 @@ export const actions = {
         commit('SET_USER', null)
     }
   },
-  async getRepos({commit}){
+  async getRepos({commit}, data){
     try {
         let response = await axios.get(`https://api.github.com/users/${process.env.USERNAME}/repos`)
         commit ('SET_REPOS', response.data)
     } catch (e) {
         commit('SET_REPOS', null)
     }
+  },
+  async getNewRepos({commit}, data){
+    try {
+        let response = await axios.get(`https://api.github.com/users/${process.env.USERNAME}/repos?page=${data}`)
+        commit ('SET_REPOS', response.data)
+    } catch (e) {
+        commit('SET_REPOS', null)
+    }
+  },
+  clearRepos({commit}) {
+    commit('SET_REPOS', [])
   },
   async getOrgs({commit}){
     try {

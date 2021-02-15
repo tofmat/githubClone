@@ -119,7 +119,8 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   data() {
     return {
-      display: false
+      display: false,
+      pageNumber: 1
     }
   },
   methods: {
