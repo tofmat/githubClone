@@ -51,7 +51,7 @@
           </div>
           <div class="imageMenu navIte noMobile">
             <a href="">
-              <img src="@/assets/me.jpeg" alt="image" width="20px" height="20px">
+              <img :src="user && user.avatar_url" alt="image" width="20px" height="20px">
             </a>
           </div>
         </div>
@@ -92,7 +92,7 @@
                 <li class="navLink">
                   <div class="flex imageMenu">
                     <a href="" class="mr-5">
-                      <img src="@/assets/me.jpeg" alt="image" width="20px" height="20px">
+                      <img :src="user && user.avatar_url" alt="image" width="20px" height="20px">
                     </a>
                     tofmat
                   </div>
@@ -115,6 +115,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
   data() {
     return {
@@ -124,7 +125,24 @@ export default {
   methods: {
     onDisplay() {
       this.display = !this.display
-    }
+    },
+    ...mapActions({
+      getUser: 'getUser',
+      getRepos: 'getRepos',
+      getOrgs: 'getOrgs',
+      getStarred: 'getStarred'
+    }),
+  },
+  computed: {
+    ...mapGetters({
+      user: 'user',
+    })
+  },
+  created() {
+    this.getUser();
+    this.getRepos();
+    this.getOrgs();
+    this.getStarred();
   }
 }
 </script>
