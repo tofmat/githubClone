@@ -21,7 +21,7 @@
       </div>
       <div class="flex repoItem" v-for="repo in repos" :key="repo.id">
           <div class="left">
-            <h1><a href="">{{repo.name}}</a></h1>
+            <h1><a :href="repo.html_url" target="_blank">{{repo.name}}</a></h1>
             <small v-if="repo.fork">Forked from {{repo.full_name}}</small>
             <p v-if="repo.description">{{repo.description}}</p>
             <div class="flex">
@@ -29,7 +29,7 @@
                     <span class="repo-language-color mr-5" style="background-color: #2c3e50"></span>
                     <p class="mr-16">{{repo.language}}</p>
                 </div>
-                <p>Updated at {{repo.updated_at}}</p>
+                <p>Updated on {{repo.updated_at | slicee}}</p>
             </div>
           </div>
           <div class="right">
@@ -56,7 +56,7 @@
           </div>
       </div>
       <div v-if="!repos.length">
-          <h1 class="text-center">There's nothing here</h1>
+          <h1 class="text-center">There's no repo here at the moment</h1>
       </div>
       <div class="pagination flex items-center justify-center">
           <button class="previous" @click="(pageNumber = pageNumber - 1), clickPag()" :disabled="pageNumber == 1">Previous</button>
@@ -83,6 +83,13 @@ export default {
             window.scrollTo(0, 0);
             this.$store.dispatch("clearRepos", this.pageNumber);
             this.$store.dispatch("getNewRepos", this.pageNumber);
+        }
+    },
+    filters: {
+        slicee(data) {
+            let str = data.toString();
+            let res = str.slice(0, 10);
+            return res;
         }
     }
 }
