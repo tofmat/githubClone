@@ -2,7 +2,7 @@
   <div class="repoList">
       <div class="flex repoSearch scrollX">
           <div class="flex-auto">
-            <input type="text" placeholder="Find a repository..." class="repoInput">
+            <input type="text" placeholder="Find a repository..." class="repoInput" v-model="search">
           </div>
           <div class="flex">
             <button class="mxx-6 notGreen flex items-center">
@@ -19,7 +19,7 @@
             </button>
           </div>
       </div>
-      <div class="flex repoItem" v-for="repo in repos" :key="repo.id">
+      <div class="flex repoItem" v-for="repo in filteredItems" :key="repo.id">
           <div class="left">
             <h1><a :href="repo.html_url" target="_blank">{{repo.name}}</a></h1>
             <small v-if="repo.fork" class="noRepo">Forked from {{repo.full_name}}</small>
@@ -34,7 +34,7 @@
                     <span class="repo-language-color mr-5" style="background-color: #e34c26" v-else></span>
                     <p class="mr-16">{{repo.language}}</p>
                 </div>
-                <p>Updated on {{repo.updated_at | slicee}}</p>
+                <p>Updated {{ $moment(repo.updated_at, 'YYYYMMDD').fromNow() }}</p>
             </div>
           </div>
           <div class="right">
@@ -75,13 +75,19 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
     data() {
         return {
-            pageNumber: 1
+            pageNumber: 1,
+            search: ''
         }
     },
     computed: {
         ...mapGetters({
             repos: 'repos',
+        }),
+        filteredItems() {
+        return this.repos.filter((item) => {
+            return item.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1
         })
+        },
     },
     methods: {
         clickPag() {
